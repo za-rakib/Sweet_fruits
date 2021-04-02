@@ -10,9 +10,9 @@ const AddFruits = () => {
     const eventData = {
       name: data.name,
       imageUrl: imageUrl,
-      price:data.price
+      price: data.price
     }
-    const url = `http://localhost:5000/addFruits`
+    const url = `https://stark-castle-51698.herokuapp.com/addFruits`
 
     fetch(url, {
       method: 'POST',
@@ -43,7 +43,7 @@ const AddFruits = () => {
       <h1 style={{ color: 'Black' }}>Add your Event Here</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <h3 style={{ color: 'Black' }}>Product Name</h3>
-        <input name="name" defaultValue="new-event" ref={register} />
+        <input name="name" ref={register} />
         <br />
         <h3 style={{ color: 'Black' }}>Add Price</h3>
         <input name="price" ref={register} />

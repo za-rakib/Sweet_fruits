@@ -34,6 +34,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route exact path="/">
+            <Home/>
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

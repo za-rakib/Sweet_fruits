@@ -16,7 +16,7 @@ const Fruits = ({fruit}) => {
                     <Card.Img className="card-img" variant="top" src={fruit.imageUrl} />
                     <Card.Body>
                         <Card.Title ><h3  >{fruit.name} </h3></Card.Title>
-                        <Card.Text className="card-text"> ${fruit.price} &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;<Button onClick={() => handleBuy(fruit.fruitType)} variant="success">Buy Now</Button> </Card.Text>
+                        <Card.Text className="card-text"> ${fruit.price} &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button onClick={() => handleBuy(fruit.fruitType)} variant="success">Buy Now</Button> </Card.Text>
                     </Card.Body>
                 </Card>
 

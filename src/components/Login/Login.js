@@ -38,7 +38,8 @@ const Login = () => {
 
     }
     return (
-        <div>
+        <div className='login-aria'>
+            <h1 >Please Login</h1>
             <div className="googleBtn"><Button variant="success" onClick={handleGoogleSignIn}>Google Sign In</Button></div>
         </div>
     );
