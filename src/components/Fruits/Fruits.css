@@ -2,8 +2,16 @@
     margin-left: 20px;
 }
 .card{
-    margin-bottom: 30px;
+     margin-bottom: 30px;
     width: 18rem;
      color: black;
-
+     background-color: #9e313a;
+}
+.card-text{
+    font-size: 30px;
+     color: #31339e;
+}
+.card-img{
+    height: 250px;
+    width:285px;
 }
