@@ -40,8 +40,7 @@ const AddFruits = () => {
         console.log(error);
       });
   }
-  var file = document.getElementById("file").innerText;
-  
+
   return (
     <div>
       <div className="add-fruits">
