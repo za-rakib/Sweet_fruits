@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Button from 'react-bootstrap/Button'
 
 const AddFruits = () => {
+
   const { register, handleSubmit, watch, errors } = useForm();
   const [imageUrl, setImageUrl] = useState(null)
 
@@ -38,20 +40,25 @@ const AddFruits = () => {
         console.log(error);
       });
   }
+  var file = document.getElementById("file").innerText;
+  
   return (
     <div>
-      <h1 style={{ color: 'Black' }}>Add your Event Here</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h3 style={{ color: 'Black' }}>Product Name</h3>
-        <input name="name" ref={register} />
-        <br />
-        <h3 style={{ color: 'Black' }}>Add Price</h3>
-        <input name="price" ref={register} />
-        <br />
-        <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-        <br />
-        <input type="submit" />
-      </form>
+      <div className="add-fruits">
+        <h1 style={{ color: 'Black' }}>Add your Event Here</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <h3 style={{ color: 'Black' }}>Product Name : <input name="name" ref={register} /></h3>
+
+          <br />
+          <h3 style={{ color: 'Black' }}>Add Price :  <input name="price" ref={register} /></h3>
+          <br />
+          <input name="exampleRequired"  type="file" onChange={handleImageUpload} />
+          <br />
+          <br />
+          {/* <input type="submit" /> */}
+          <Button type="submit" variant="secondary">Submit</Button>{' '}
+        </form>
+      </div>
     </div>
   );
 };
